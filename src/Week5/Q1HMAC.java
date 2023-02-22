@@ -28,7 +28,7 @@ public class Q1HMAC {
         } catch (InvalidKeyException e) {
             throw new RuntimeException(e);
         }
-        byte[] result = mac.doFinal("Rosie is a GILF".getBytes());
+        byte[] result = mac.doFinal("Well hello there".getBytes());
         System.out.println(result.length);
         String encodedHmac = Base64.getEncoder().encodeToString(result);
         System.out.println("Encoded HMAC 1: " + encodedHmac);
@@ -45,7 +45,7 @@ public class Q1HMAC {
         } catch (InvalidKeyException e) {
             throw new RuntimeException(e);
         }
-        byte[] result2 = mac.doFinal("Rosie is a GILF".getBytes());
+        byte[] result2 = mac.doFinal("Well hello there".getBytes());
 
         String encodedHmac2 = Base64.getEncoder().encodeToString(result2);
         System.out.println("Encoded HMAC 2: " + encodedHmac2);
